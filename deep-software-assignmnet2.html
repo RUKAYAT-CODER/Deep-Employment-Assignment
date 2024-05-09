@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Sofware Assignment 2</title>
+  <style>
+/* .container{
+  @media (max-width: 600px){
+background-color: red;
+  }
+
+  @media (max-width:800px){
+    background-color: blue;
+  }
+} */
+body{
+ 
+  @media (min-width: 600px){
+background-color: blue;
+  }
+
+  @media (max-width:800px){
+    background-color: red;
+  }
+}
+/* flex container */
+.container-flex{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.card-one, .card-two, .card-three{
+  width: 300px;
+  height: 360px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: brown;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+
+img{
+  width:100%;
+  height:150px;
+}
+h2,h4{
+  color: white;
+}
+@media (max-width:860px){
+  .container-flex{
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  margin-bottom: 20px;
+}
+}
+@media (max-width:860px){
+  .container-flex{
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  margin-bottom: 20px;
+}
+}
+@media (max-width:460px){
+  .container-flex{
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  margin-bottom: 20px;
+}
+}
+
+
+/* grid container  */
+.container-grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+}
+
+@media (max-width:860px){
+  .container-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  /* row-gap: 10px;
+  margin-bottom: 20px; */
+}
+}
+  </style>
+</head>
+<body>
+  <! --flex-->
+  <div class="container-flex">
+    <div class="card-one">
+      <h2>Home Services</h2>
+      <img src="/rukayat-solutions. equipment repairs.webp" alt=" An electrician repairing an AC">
+      <h4>Description</h4>
+      <p> The image above is a description of a man carring out repairs and maintenance service on an AC.</p>
+    </div>
+    <div class="card-two">
+      <h2>Home Services</h2>
+      <img src="/homeservice-hero section-Rukayat-solutions.jpg" alt=" A set of cleaners, cleaning the home">
+      <h4>Description</h4>
+      <p> The image above is a description of a some home service personel cleaning and taking care of the home.</p>
+    </div>
+    <div class="card-three">
+      <h2>Home Services</h2>
+      <img src="/rukayat-solutions. home service middle image.webp" alt=" Home service personel delibrating">
+      <h4>Description</h4>
+      <p> The image above is a description of home service personel delibrating on how to carry out quality services.</p>
+    </div>
+    </div>
+
+      <! --grid-->
+    <div class="container-grid">
+      <div class="card-one">
+        <h2>Home Services Grid</h2>
+        <img src="/rukayat-solutions. equipment repairs.webp" alt=" An electrician repairing an AC">
+        <h4>Description</h4>
+        <p> The image above is a description of a man carring out repairs and maintenance service on an AC.</p>
+      </div>
+      <div class="card-two">
+        <h2>Home Services Grid</h2>
+        <img src="/homeservice-hero section-Rukayat-solutions.jpg" alt=" A set of cleaners, cleaning the home">
+        <h4>Description</h4>
+        <p> The image above is a description of a some home service personel cleaning and taking care of the home.</p>
+      </div>
+      <div class="card-three">
+        <h2>Home Services Grid</h2>
+        <img src="/rukayat-solutions. home service middle image.webp" alt=" Home service personel delibrating">
+        <h4>Description</h4>
+        <p> The image above is a description of home service personel delibrating on how to carry out quality services.</p>
+      </div>
+    </div>
+  
+</body>
+</html>
