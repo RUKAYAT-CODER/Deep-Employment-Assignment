@@ -42,12 +42,14 @@
 </head>
 <body>
   <h2>Simple Calculator</h2>
+<!--   Table for creating a calculator -->
   <table id="table">
     <tr>
+<!--       Display input with a class and an ID -->
       <td colspan="3"><input type="text" class="display" id="result"></td>
       <td><input type="button" value="C" onclick="clearScreen()"></td>
     </tr>
-
+      <!--Input field in a table with the onclick event listner and a display function  -->
     <tr>
       <td><input type="button" value="1" onclick="display('1')"></td>
       <td><input type="button" value="2" onclick="display('2')"></td>
@@ -81,15 +83,20 @@
     //   let dataType = data.getAttribute('data-value')
     //   console.log(dataType)
     // }
+    //Function to dispaly the value on the screen
     function display(value){
       document.getElementById('result').value +=value
     }
+
+      //Function to clear the value on the screen
     function clearScreen(){
     document.getElementById('result').value ='' 
     }
+
+      //Function to compute the value on the screen
     function compute(){
-      //const answer = document.getElementById('result').value;
-      const finalAnswer = eval(document.getElementById('result').value)
+      const answer = document.getElementById('result').value;
+      const finalAnswer = eval(answer)
       document.getElementById('result').value = finalAnswer
       
     }
