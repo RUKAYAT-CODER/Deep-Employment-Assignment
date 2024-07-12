@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: sans-serif;
+      
+    }
+    .container{
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;background-color: rgb(238, 35, 66);
+    }
+    h2{
+      color: white;
+      text-align: center;
+    }
+    input[type='text']{
+      width: 70%;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      outline: none;
+    }
+    button{
+      background-color: rgb(171, 169, 169);
+      color: #fff;
+      padding: 10px 40px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+    }
+    ul{
+      list-style-type: none;
+      padding: 0;
+    }
+    li{
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ede8e8;
+    }
+    li:nth-child(odd){
+      background-color: #4c4b4b;
+      color: white;
+    }
+    button:hover{
+      background-color: transparent;
+      border: 1px solid gray;
+    }
+    .close{
+      float:right;
+      font-weight: bold;
+      cursor: pointer;
+      color: rgb(92, 7, 7);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+      <h2>My To Do List</h2>
+    
+    <input type="text" id="taskInput" placeholder="Please enter a task">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    const taskInput = document.getElementById('taskInput');
+    const taskList = document.getElementById('taskList');
+
+    function addTask() {
+      const taskInputValue = taskInput.value.trim()
+      if (taskInputValue)
+      {
+        const li = document.createElement('li');
+        li.textContent = taskInputValue;
+
+        // const deleteButton = document.createElement('button')
+        // deleteButton.textContent ='Delete';
+        const closeSign = document.createElement('span');
+        closeSign.textContent ='X';
+        closeSign.className ='close';
+        closeSign.onclick =()=>li.remove()
+        li.appendChild(closeSign)
+         taskList.appendChild(li);
+         taskInput.value = ''
+        // deleteButton.onclick = ()=>li.remove()
+        // li.appendChild(deleteButton)
+        // taskList.appendChild(li);
+        // taskInput.value = ''
+      }
+    }
+  </script>
+</body>
+</html>
